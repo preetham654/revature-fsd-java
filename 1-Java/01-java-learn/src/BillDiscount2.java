@@ -6,9 +6,9 @@ public class BillDiscount2 {
 		float percentageDiscount;
 		Scanner scanner = new Scanner(System.in);
 		System.out.println("enter the bill amount");
-	    billAmount = scanner.nextInt();
+	    billAmount = scanner.nextFloat();
 		System.out.println("enter the percentage discount");
-		percentageDiscount = scanner.nextInt();
+		percentageDiscount = scanner.nextFloat();
 		
 		float discount =(billAmount*percentageDiscount/100);
 		System.out.println("Discount ="+discount);
