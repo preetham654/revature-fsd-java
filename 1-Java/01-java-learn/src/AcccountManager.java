@@ -7,6 +7,7 @@ public class AcccountManager {
 		
 		System.out.println("Account Statement of"+ accountNumber);
 		System.out.println("Initial Balance"+balance);
+		
 		System.out.println("\n---------------");
 		System.out.println("Type Transaction Balance");
 		System.out.println("---------------");

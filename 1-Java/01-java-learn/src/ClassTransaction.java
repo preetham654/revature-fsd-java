@@ -22,7 +22,7 @@ public class ClassTransaction {
 		Transaction transcation5 = new Transaction('W',10000);
 		
 		float[] scores = {48,55,78,25,22};
-		Transaction transcationArray = (transaction1,transaction2,transaction3,transaction4,transaction5);
+		Transaction transacionArray = (transaction1,transaction2,transaction3,transaction4,transaction5);
 		
 		for(Transaction transaction : transactionArray) {
 			transaction.displayTransaction(5000);
