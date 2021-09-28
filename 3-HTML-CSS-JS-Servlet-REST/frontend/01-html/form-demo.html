@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Form Demo</title>
+    </head>
+    <body>
+        <h1>Form Demo</h1>
+        <form method="post" action="https://www.w3schools.com/action_page.php">
+            <label for = "name">Name:</label>
+            <input type = "text" id = "name" placeholder = "Enter Name" value = "John" name = "name"><br>
+            <label for = "password">Password:</label>
+            <input type = "password" placeholder = "Min. 8 characters" required value = "123" name = "password"><br><br>
+            <label for = "email">Email:</label>
+            <input type = "text" id="email" value="123@gmail.com" pattern="[a-z0-9._%+-]+@[a-z0-9.9.-]+\.[a-z]{2,}$" title = "Enter valid email"><br>
+
+            <select>
+                <option>Red</option>
+                <option>Green</option>
+                <option selected>Blue</option>
+            </select><br><br>
+
+            <label>Gender</label>
+            <input type = "radio" name = "gender" id = "m" id ="male">
+            <label for = "male">Male</label>
+            <input type = "radio" name = "gender" id = "f" checked> 
+            <label for = "female">Female</label><br><br>
+
+            <select multiple>name="languages-m"
+                <option>English</option>
+                <option>Arabic</option>
+                <option>Spanish</option>
+                <option>French</option>
+            </select><br><br>
+
+            <input type = "checkbox" id="english"> <label.for="english">English</label><br>
+            <input type = "checkbox" id="Arabic"> <label.for="arabich">Arabic</label><br>
+            <input type = "checkbox" id="Spanish"> <label.for="spanish">Spanish</label><br>
+            <input type = "checkbox" id="French"> <label.for="french">French</label><br>
+
+            <textarea>"text area">Line 1
+Line 2 
+Line 3
+            </textarea>
+            <input type = "submit" value = "Login">
+        </form>
+    </body>
+</html>
