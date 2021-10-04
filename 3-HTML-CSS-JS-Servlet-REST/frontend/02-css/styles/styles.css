@@ -6,3 +6,9 @@
     color: yellow; 
     font-weight: bold; 
     cursor: pointer
+  }
+   /* ID Selector */
+   #heading {
+    color : blue
+}
+
