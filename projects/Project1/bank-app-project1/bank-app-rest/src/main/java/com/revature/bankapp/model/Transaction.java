@@ -4,6 +4,13 @@ public class Transaction {
 	private long id;
 	private String type;
 	private long money;
+	private long accountId;
+	public long getAccountId() {
+		return accountId;
+	}
+	public void setAccountId(long accountId) {
+		this.accountId = accountId;
+	}
 	public String getType() {
 		return type;
 	}

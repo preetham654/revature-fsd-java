@@ -29,7 +29,7 @@ public class Customer {
 		// map.put((long) 102,new Account("Venkat","Balaji Colony",6000));
 	}
 	
-	public Customer(String firstName, String lastName, String email, String passowrd) {
+	public Customer(String firstName, String lastName, String email, String password) {
 		super();
 		this.firstName = firstName;
 		this.lastName = lastName;
@@ -56,7 +56,7 @@ public class Customer {
 		return password;
 	}
 
-	public void setPassowrd(String passowrd) {
+	public void setPassword(String password) {
 		this.password = password;
 	}
 

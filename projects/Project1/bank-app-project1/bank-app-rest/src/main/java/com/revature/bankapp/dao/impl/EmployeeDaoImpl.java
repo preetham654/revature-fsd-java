@@ -7,16 +7,20 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import com.revature.bankapp.dao.EmployeeDao;
 import com.revature.bankapp.dao.Util;
+import com.revature.bankapp.exception.AppException;
 import com.revature.bankapp.model.Account;
 import com.revature.bankapp.model.Customer;
 import com.revature.bankapp.model.Transaction;
 
 public class EmployeeDaoImpl implements EmployeeDao {
-
+	private static final Logger LOGGER = LoggerFactory.getLogger(EmployeeDaoImpl.class);
 	@Override
-	public List<Customer> showCustomerList() throws SQLException {
+	public List<Customer> showCustomerList() throws AppException {
 		List<Customer> custList = new ArrayList<>();
 		try (Connection connection = Util.getConnection()) {
 			String sql = "select c.customer_id , c.first_name, c.last_name, a.account_id ,a.balance from customer c inner join account a where c.customer_id = a.cust_id";
@@ -37,12 +41,15 @@ public class EmployeeDaoImpl implements EmployeeDao {
 				custList.add(customer);
 
 			}
-		}
+		}catch(SQLException e) {
+			LOGGER.error("Error showing accounts",e);
+			throw new AppException(e);
+			}
 		return custList;
 	}
 
 	@Override
-	public List<Transaction> showTransList(long accountId) throws SQLException {
+	public List<Transaction> showTransList(long accountId) throws AppException {
 		List<Transaction> transList = new ArrayList<>();
 		try (Connection connection = Util.getConnection()) {
 			String sql = "select transaction_id,transaction_type,amount from transaction where account_id = ?";
@@ -58,6 +65,9 @@ public class EmployeeDaoImpl implements EmployeeDao {
 
 				transList.add(transaction);
 			}
+		}catch(SQLException e) {
+			LOGGER.error("Error showing accounts",e);
+			throw new AppException(e);
 		}
 		return transList;
 	}

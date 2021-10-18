@@ -6,7 +6,7 @@ import com.revature.bankapp.exception.AppException;
 import com.revature.bankapp.model.Customer;
 
 public interface CustomerDao {
-	void create(Customer customer) throws SQLException, AppException;
-	Customer getCustomerByEmail(String email) throws SQLException;
+	void create(Customer customer) throws AppException;
+	Customer getCustomerByEmail(String email) throws AppException;
 	
 }

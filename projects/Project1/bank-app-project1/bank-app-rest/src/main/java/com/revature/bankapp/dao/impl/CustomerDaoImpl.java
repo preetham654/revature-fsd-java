@@ -38,7 +38,7 @@ public class CustomerDaoImpl implements CustomerDao {
 
 	}
 
-	public Customer getCustomerByEmail(String email) throws SQLException {
+	public Customer getCustomerByEmail(String email) throws AppException {
 		LOGGER.info("Start");
 		Customer customer = null;
 		try (Connection connection = Util.getConnection()) {
@@ -57,9 +57,9 @@ public class CustomerDaoImpl implements CustomerDao {
 				
 			}LOGGER.info("End");
 		}
-		catch(SQLException e){
+		catch(SQLException e) {
 			LOGGER.error("Error insering customer",e);
-			throw new SQLException(e);
+			throw new AppException(e);
 		}
 		return customer;
 	}
