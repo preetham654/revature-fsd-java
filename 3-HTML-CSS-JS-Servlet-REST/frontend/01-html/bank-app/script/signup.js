@@ -3,7 +3,7 @@ let firstName = document.getElementById("firstname");
 let lastName = document.getElementById("lastname");
 let email = document.getElementById("email");
 let password = document.getElementById("password");
-// let form = document.forms[0];
+let form = document.forms[0];
 let valid = true;
 let firstNameValidError;
 let lastNameValidError;
