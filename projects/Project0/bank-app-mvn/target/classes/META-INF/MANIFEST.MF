@@ -1,5 +1,13 @@
+<<<<<<< HEAD
 Manifest-Version: 1.0
 Built-By: prave
 Build-Jdk: 1.8.0_172
 Created-By: Maven Integration for Eclipse
 
+=======
+Manifest-Version: 1.0
+Built-By: prave
+Build-Jdk: 1.8.0_172
+Created-By: Maven Integration for Eclipse
+
+>>>>>>> 8f64ad9b986da6ea5bd13789b61cf7ccbf471e30
