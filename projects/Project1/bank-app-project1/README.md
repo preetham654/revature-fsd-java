@@ -25,7 +25,7 @@ The Bank app is a web-based application that simulates banking operations. A cus
 * As an user, I can logout.
 
 To-do list:
-* Transafer of money from one account to another account.
+* Transfer of money from one account to another account.
 * Account verification by employee.
 
 ## Getting Started
